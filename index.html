@@ -18,7 +18,26 @@ Manifolds - Ruizeng Li, Peiqi Wang, Beibei Wang, Ligang Liu">
   <meta name="language" content="English">
   
   <!-- Open Graph / Facebook -->
-  
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="University of Science and Technology of China &amp; Laoshan Laboratory &amp; Nanjing University">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="Differentiable Rendering for Specular Materials via Projected Specular
+Manifolds">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="We present a method for handling discontinuities caused by specular materials in differentiable rendering. The key is to project the specular manifold onto the object surface and employ warped-area reparameterization to compute the boundary integral. Our computed derivatives match references successfully and enable effective gradient-based optimization.">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://rhythm25.github.io/PSMpage/">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="static/images/rep.jpg">
+  <meta property="og:image:width" content="2048">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
+  <!-- <meta property="article:published_time" content="2026-03-04T00:00:00.000Z"> -->
+  <meta property="article:author" content="Ruizeng Li">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="Differentiable rendering">
+  <meta property="article:tag" content="specular manifold">
 
   <!-- Twitter -->
   
@@ -112,10 +131,10 @@ Manifolds</h1>
                 <span class="author-block">
                   Peiqi Wang<sup>1</sup>,</span>
                   <span class="author-block">
-                    <a href="https://wangningbei.github.io/" target="_blank">Beibei Wang<sup>3</sup></a>,
+                    <a href="https://wangningbei.github.io/" target="_blank">Beibei Wang</a><sup>3</sup>,
                   </span>
                   <span class="author-block">
-                    <a href="http://staff.ustc.edu.cn/~lgliu/" target="_blank">Ligang Liu<sup>1,2</sup></a>
+                    <a href="http://staff.ustc.edu.cn/~lgliu/" target="_blank">Ligang Liu</a><sup>1,2</sup>
                   </span>
                   </div>
 
@@ -149,7 +168,7 @@ Manifolds</h1>
                     </span>
 
                     <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -157,11 +176,22 @@ Manifolds</h1>
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
+                  <span class="link-block">
+                        <a href="#" 
+                          target="_blank"
+                          title="Coming Soon"
+                          class="external-link button is-normal is-rounded is-dark">
+                            <span class="icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </span>
+                            <span>Supplementary</span>
+                        </a>
+                    </span>
 
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/Rhythm25/PSM" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -170,16 +200,6 @@ Manifolds</h1>
                   </a>
                 </span>
 
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
             </div>
           </div>
         </div>
@@ -190,21 +210,18 @@ Manifolds</h1>
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
       <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
         <source src="static/videos/banner_video.mp4" type="video/mp4">
       </video>
-      <!-- TODO: Replace with your video description -->
       <h2 class="subtitle has-text-centered">
         Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -216,7 +233,7 @@ Manifolds</h1>
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Physically-based differentiable rendering computes derivatives of radiometric measures with respect to scene parameters. A key challenge lies in handling scene discontinuities from geometries, materials, and other factors. These discontinuities lead to a unique boundary integral defined on discontinuity curves. While occlusion-induced discontinuities have been well studied, those caused by materials, especially specular materials, remain largely unexplored. Specular bidirectional scattering distribution functions (BSDFs) contain Dirac delta distributions arising from the laws of perfect reflection or refraction, which constrain light path geometry and restrict the path integral to the specular manifold. The specular manifold is defined by geometric constraints and lacks explicit location, making the evaluation of discontinuity curves challenging. To address this, our key insight is that we can locate the specular manifold by projecting it onto a subregion of a specular object, which we call the projected specular manifold (PSM). After projection, while exact locations of discontinuity curves remain unknown, we can adopt the warped-area reparameterization to convert the boundary integral into an interior integral over the surface, avoiding the need to precisely locate these curves. The key challenge of this reparameterization is constructing an additional velocity field. For this, our key observation is that for a specular path, the distances from vertices to discontinuity curves and associated velocities are known. Therefore, we propose a simple but practical direct-interpolation-based method to construct the velocity. Furthermore, we extend the WAS to handle visibility boundaries with specular BSDFs and generalize our method to glossy materials. Our computed derivatives match references with minor additional computational cost, and can successfully drive gradient-based optimization tasks like shape and position estimation.
           </p>
         </div>
       </div>
@@ -227,34 +244,29 @@ Manifolds</h1>
 
 
 <!-- Image carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
-        <!-- TODO: Replace with your research result images -->
         <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
         <h2 class="subtitle has-text-centered">
           First image description.
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
         <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
           Second image description.
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
         <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
          Third image description.
        </h2>
      </div>
      <div class="item">
-      <!-- Your image here -->
       <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
       <h2 class="subtitle has-text-centered">
         Fourth image description.
@@ -263,64 +275,36 @@ Manifolds</h1>
   </div>
 </div>
 </div>
-</section>
+</section> -->
 <!-- End image carousel -->
 
 
 
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
 <!-- Video carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
           <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
             <source src="static/videos/carousel1.mp4" type="video/mp4">
           </video>
         </div>
         <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
           <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
             <source src="static/videos/carousel2.mp4" type="video/mp4">
           </video>
         </div>
         <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
           <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
             <source src="static/videos/carousel3.mp4" type="video/mp4">
           </video>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End video carousel -->
 
 
@@ -329,18 +313,17 @@ Manifolds</h1>
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
 
-      <!-- TODO: Replace with your poster PDF -->
       <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
           </iframe>
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
@@ -355,13 +338,9 @@ Manifolds</h1>
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
+      <pre id="bibtex-code"><code>
+        Coming soon.
+      </code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
