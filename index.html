@@ -4,54 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="Differentiable Rendering for Specular Materials via Projected Specular
-Manifolds - Ruizeng Li, Peiqi Wang, Beibei Wang, Ligang Liu">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="We present a method for handling discontinuities caused by specular materials in differentiable rendering. The key is to project the specular manifold onto the object surface and employ warped-area reparameterization to compute the boundary integral. Our computed derivatives match references successfully and enable effective gradient-based optimization.">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="Differentiable rendering, specular manifold, discontinuity, delta function">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="Ruizeng Li, Peiqi Wang, Beibei Wang, Ligang Liu">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="University of Science and Technology of China &amp; Laoshan Laboratory &amp; Nanjing University">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="Differentiable Rendering for Specular Materials via Projected Specular
-Manifolds">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="We present a method for handling discontinuities caused by specular materials in differentiable rendering. The key is to project the specular manifold onto the object surface and employ warped-area reparameterization to compute the boundary integral. Our computed derivatives match references successfully and enable effective gradient-based optimization.">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://rhythm25.github.io/PSMpage/">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="static/images/rep.jpg">
-  <meta property="og:image:width" content="2048">
-  <meta property="og:image:height" content="1024">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <!-- <meta property="article:published_time" content="2026-03-04T00:00:00.000Z"> -->
-  <meta property="article:author" content="Ruizeng Li">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="Differentiable rendering">
-  <meta property="article:tag" content="specular manifold">
-
-  <!-- Twitter -->
-  
-
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="Differentiable Rendering for Specular Materials via Projected Specular
-Manifolds">
-  <meta name="citation_author" content="Ruizeng Li">
-  <meta name="citation_author" content="Peiqi Wang">
-  <meta name="citation_author" content="Beibei Wang">
-  <meta name="citation_author" content="Ligang Liu">
-  <meta name="citation_publication_date" content="2026">
-  <meta name="citation_conference_title" content="SIGGRAPH Asia 2026">
-  <!-- <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf"> -->
   
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
@@ -69,7 +21,7 @@ Manifolds">
 
   <!-- TODO: Replace with your paper title and authors -->
   <title>Differentiable Rendering for Specular Materials via Projected Specular
-Manifolds - Ruizeng Li, Peiqi Wang, Beibei Wang, Ligang Liu | Academic Research</title>
+Manifolds | Academic Research</title>
   
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/grad_ourrepre_map111.png">
@@ -126,23 +78,7 @@ Manifolds - Ruizeng Li, Peiqi Wang, Beibei Wang, Ligang Liu | Academic Research<
 Manifolds</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="https://rhythm25.github.io/" target="_blank">Ruizeng Li</a><sup>1,2</sup>,</span>
-                <span class="author-block">
-                  Peiqi Wang<sup>1</sup>,</span>
-                  <span class="author-block">
-                    <a href="https://wangningbei.github.io/" target="_blank">Beibei Wang</a><sup>3</sup>,
-                  </span>
-                  <span class="author-block">
-                    <a href="http://staff.ustc.edu.cn/~lgliu/" target="_blank">Ligang Liu</a><sup>1,2</sup>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block"><sup>1</sup>University of Science and Technology of China, <sup>2</sup>Laoshan Laboratory, <sup>3</sup>Nanjing University<br>SIGGRAPH Asia 2026</span>
-                  </div>
-
+              
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- TODO: Update with your arXiv paper ID -->
@@ -208,36 +144,6 @@ Manifolds</h1>
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="static/images/teasernew.jpg" alt="Teaser" loading="lazy">
-      <h2 class="subtitle has-text-centered">
-        We present a method for handling discontinuities caused by specular materials in differentiable rendering. The key is to project the specular manifold onto the object surface and employ warped-area reparameterization to compute the boundary integral. Our computed derivatives match references successfully and enable effective gradient-based optimization.
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Physically-based differentiable rendering computes derivatives of radiometric measures with respect to scene parameters. A key challenge lies in handling scene discontinuities from geometries, materials, and other factors. These discontinuities lead to a unique boundary integral defined on discontinuity curves. While occlusion-induced discontinuities have been well studied, those caused by materials, especially specular materials, remain largely unexplored. Specular bidirectional scattering distribution functions (BSDFs) contain Dirac delta distributions arising from the laws of perfect reflection or refraction, which constrain light path geometry and restrict the path integral to the specular manifold. The specular manifold is defined by geometric constraints and lacks explicit location, making the evaluation of discontinuity curves challenging. To address this, our key insight is that we can locate the specular manifold by projecting it onto a subregion of a specular object, which we call the projected specular manifold (PSM). After projection, while exact locations of discontinuity curves remain unknown, we can adopt the warped-area reparameterization to convert the boundary integral into an interior integral over the surface, avoiding the need to precisely locate these curves. The key challenge of this reparameterization is constructing an additional velocity field. For this, our key observation is that for a specular path, the distances from vertices to discontinuity curves and associated velocities are known. Therefore, we propose a simple but practical direct-interpolation-based method to construct the velocity. Furthermore, we extend the WAS to handle visibility boundaries with specular BSDFs and generalize our method to glossy materials. Our computed derivatives match references with minor additional computational cost, and can successfully drive gradient-based optimization tasks like shape and position estimation.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <!-- End paper abstract -->
 
 
